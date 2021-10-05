@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/E1-Debugging/E1-Debugging.iml" filepath="$PROJECT_DIR$/E1-Debugging/E1-Debugging.iml" />
       <module fileurl="file://$PROJECT_DIR$/I1-Taschenrechner/I1-Taschenrechner.iml" filepath="$PROJECT_DIR$/I1-Taschenrechner/I1-Taschenrechner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wartezeit/Wartezeit.iml" filepath="$PROJECT_DIR$/Wartezeit/Wartezeit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wartezeitanzeige/Wartezeitanzeige.iml" filepath="$PROJECT_DIR$/Wartezeitanzeige/Wartezeitanzeige.iml" />
       <module fileurl="file://$PROJECT_DIR$/l2-EinfachesProgram/l2-EinfachesProgram.iml" filepath="$PROJECT_DIR$/l2-EinfachesProgram/l2-EinfachesProgram.iml" />
       <module fileurl="file://$PROJECT_DIR$/l2-EinfachesProgramm/l2-EinfachesProgramm.iml" filepath="$PROJECT_DIR$/l2-EinfachesProgramm/l2-EinfachesProgramm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/m319_Taschenrechner.iml" filepath="$PROJECT_DIR$/.idea/m319_Taschenrechner.iml" />
