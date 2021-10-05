@@ -7,9 +7,10 @@ import java.util.*;
 
 public class I3 {
 
-    public static Scanner scan = new Scanner(System.in);
+    public static final Scanner scan = new Scanner(System.in);
     public static I3 c = new I3();
 
+    //repeats the whole process until again returns false
     public static void main(String[] args) {
         do {
             System.out.println(c.outputSelector(c.calcTime(c.getKassen(), c.getKundenZeit())));
@@ -19,7 +20,7 @@ public class I3 {
     //gets Input for Loop (true/false)
     public boolean again(){
         System.out.println("Neu berechnen? true/false");
-        return scan.nextBoolean();
+        return getInputBool();
     }
 
     //generates the output
@@ -36,10 +37,8 @@ public class I3 {
 
     //gets the number of counters
     public int getKassen(){
-
         System.out.println("Bitte anzahl Kassen eingeben:");
-        return scan.nextInt();
-
+        return getInputInteger();
     }
 
     //gets the customerTime List
@@ -52,9 +51,10 @@ public class I3 {
 
         System.out.println("Wenn Sie fertig sind drücken sie 0\nPro Kunde maximal 12 Stunden Zeit (720 min)\nZeit in Minuten eintragen");
 
+        //Adds every int to the List until it's 0
         do {
             System.out.format("\nBitte die Zeit eintragen, welche der %d Kunde braucht oder 0 zum beenden:\n", counter);
-            input = scan.nextInt();
+            input = getInputInteger();
             counter++;
 
             if (input > 0){
@@ -87,6 +87,7 @@ public class I3 {
     //gets the minimum of a list
     public int listMin(List<Integer> lst){
 
+        //720 is the maximum of time a customer can have
         int min = 720;
 
         for (int i:lst) {
@@ -119,4 +120,41 @@ public class I3 {
 
         return c.listMin(lstArr);
     }
+
+    //Input functions:
+
+    public int getInputInteger(){
+
+        boolean exception;
+
+        do {
+            try {
+                int input = Integer.parseInt(scan.nextLine());
+                return input;
+            }catch (Exception e){
+                System.out.println(e + "\nVersuche es erneut");
+                exception = true;
+            }
+        }while (exception);
+
+        return 0;
+    }
+
+    public Boolean getInputBool(){
+
+        boolean exception;
+
+        do {
+            try {
+                Boolean input = Boolean.parseBoolean(scan.nextLine());
+                return input;
+            }catch (Exception e){
+                System.out.println(e + "\nVersuche es erneut");
+                exception = true;
+            }
+        }while (exception);
+
+        return false;
+    }
+
 }
