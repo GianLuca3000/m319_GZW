@@ -11,7 +11,14 @@ public class I3 {
     public static I3 c = new I3();
 
     public static void main(String[] args) {
-        System.out.println(c.outputSelector(c.calcTime(c.getKassen(), c.getKundenZeit())));
+        do {
+            System.out.println(c.outputSelector(c.calcTime(c.getKassen(), c.getKundenZeit())));
+        }while (c.again());
+    }
+
+    public boolean again(){
+        System.out.println("Neu berechnen? true/false");
+        return scan.nextBoolean();
     }
 
     public String outputSelector(int time){
