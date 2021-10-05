@@ -16,11 +16,13 @@ public class I3 {
         }while (c.again());
     }
 
+    //gets Input for Loop (true/false)
     public boolean again(){
         System.out.println("Neu berechnen? true/false");
         return scan.nextBoolean();
     }
 
+    //generates the output
     public String outputSelector(int time){
         switch (time){
             case 0:
@@ -32,6 +34,7 @@ public class I3 {
         }
     }
 
+    //gets the number of counters
     public int getKassen(){
 
         System.out.println("Bitte anzahl Kassen eingeben:");
@@ -39,6 +42,7 @@ public class I3 {
 
     }
 
+    //gets the customerTime List
     public List<Integer> getKundenZeit(){
 
         List<Integer> timeList = new ArrayList<Integer>();
@@ -62,6 +66,7 @@ public class I3 {
         return timeList;
     }
 
+    //Calculates the Time for the output
     public int calcTime(int ka, List<Integer> ku){
         if (ka == ku.size()){
             return c.listMin(ku);
@@ -79,6 +84,7 @@ public class I3 {
         return c.arrMin(kassen);
     }
 
+    //gets the minimum of a list
     public int listMin(List<Integer> lst){
 
         int min = 720;
@@ -92,6 +98,7 @@ public class I3 {
         return min;
     }
 
+    //gets the Index of the minimum
     public int arrMinIndex(int[] arr){
 
         List<Integer> lstArr = new ArrayList<Integer>();
@@ -102,6 +109,7 @@ public class I3 {
         return lstArr.indexOf(c.listMin(lstArr));
     }
 
+    //gets the minimum in the Array
     public int arrMin(int[] arr){
 
         List<Integer> lstArr = new ArrayList<Integer>();
