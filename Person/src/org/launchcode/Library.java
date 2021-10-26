@@ -22,7 +22,7 @@ public class Library {
             return;
         }
 
-        Repos.remove(GetPersonReposIndex());
+        Repos.remove(GetPersonReposIndex() - 1);
         System.out.println("*deleted*");
     }
 
@@ -32,7 +32,7 @@ public class Library {
             return;
         }
 
-        ShowPerson(GetPersonReposIndex());
+        ShowPerson(GetPersonReposIndex() - 1);
     }
 
     //Shows all the person's names with their index
